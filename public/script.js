@@ -1,12 +1,10 @@
 const siteConfig = {
-  whatsappNumber: "",
+  whatsappNumber: "556492138965",
   whatsappMessage:
-    "Olá! Vi a apresentação dos serviços pelo site e gostaria de saber mais e solicitar um orçamento."
+    "Oi! Vi seu catálogo de serviços e gostei do seu trabalho. Gostaria de saber mais e verificar os horários disponíveis para agendar. 💕"
 };
 
 function buildWhatsAppUrl(number, message) {
-  if (!number) return null;
-
   const normalizedNumber = number.replace(/\D/g, "");
   return `https://wa.me/${normalizedNumber}?text=${encodeURIComponent(message)}`;
 }
@@ -20,29 +18,20 @@ function setupWhatsAppLinks() {
   const links = document.querySelectorAll(".js-whatsapp-link");
 
   links.forEach((link) => {
-    if (!url) {
-      link.setAttribute("href", "#");
-      link.setAttribute("aria-disabled", "true");
-      link.setAttribute(
-        "title",
-        "Adicionar o número de WhatsApp em public/script.js"
-      );
-      return;
-    }
-
     link.setAttribute("href", url);
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener noreferrer");
-    link.removeAttribute("aria-disabled");
 
     link.addEventListener("click", () => {
+      const params = new URLSearchParams(window.location.search);
+
       window.dispatchEvent(
         new CustomEvent("whatsapp_click", {
           detail: {
             source: "landing_page",
-            utm_source: new URLSearchParams(window.location.search).get(
-              "utm_source"
-            )
+            utm_source: params.get("utm_source"),
+            utm_medium: params.get("utm_medium"),
+            utm_campaign: params.get("utm_campaign")
           }
         })
       );
