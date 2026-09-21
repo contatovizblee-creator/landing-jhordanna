@@ -15,205 +15,207 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="wordmark" href="#inicio" aria-label="Jhordanna - início">Jhordanna</a>
+  <div class="site-canvas">
+    <header class="tabs-bar">
+      <nav class="tabs-nav" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a class="tabs-nav__cta js-whatsapp-link" href="#">Agendar</a>
+      </nav>
+    </header>
 
-    <nav class="site-nav" aria-label="Navegação principal">
-      <a href="#servicos">Serviços</a>
-      <a href="#trabalhos">Trabalhos</a>
-      <a class="site-nav__cta js-whatsapp-link" href="#">Agendar</a>
-    </nav>
-  </header>
+    <main class="editorial-grid">
+      <div class="left-column">
+        <section class="identity-block reveal" id="inicio">
+          <p class="identity-name">Jhordanna Araújo</p>
+          <p class="identity-role">Nail Designer</p>
+          <p class="identity-copy">Alongamento, esmaltação e cuidados para unhas que valorizam seu estilo.</p>
+        </section>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="hero__content reveal">
-        <p class="overline">Jhordanna Araújo · Nail Designer</p>
-        <h1>Beleza nos detalhes.</h1>
-        <p class="hero__copy">
-          Alongamento, esmaltação e cuidados para unhas que valorizam seu estilo.
-        </p>
-
-        <div class="hero__actions">
-          <a class="button js-whatsapp-link" href="#">Agendar meu horário</a>
-          <span>Serviços a partir de R$ 35</span>
-        </div>
-      </div>
-
-      <figure class="hero__visual reveal">
-        <div class="photo-slot photo-slot--hero" aria-label="Fotografia principal do trabalho de Jhordanna"></div>
-      </figure>
-    </section>
-
-    <section class="services section" id="servicos">
-      <div class="container">
-        <header class="section-heading reveal">
-          <p class="overline">Serviços</p>
-          <h2>Escolha seu cuidado.</h2>
-        </header>
-
-        <div class="service-list reveal" role="list" aria-label="Lista de serviços e preços">
-          <div class="service" role="listitem">
-            <div>
-              <strong>Alongamento</strong>
-              <small>Molde F1</small>
-            </div>
-            <span>A partir de R$ 110</span>
-          </div>
-
-          <div class="service" role="listitem">
-            <strong>Banho em gel</strong>
-            <span>A partir de R$ 75</span>
-          </div>
-
-          <div class="service" role="listitem">
-            <strong>Blindagem</strong>
-            <span>A partir de R$ 70</span>
-          </div>
-
-          <div class="service" role="listitem">
-            <strong>Manutenção de 15 dias</strong>
-            <span>A partir de R$ 85</span>
-          </div>
-
-          <div class="service" role="listitem">
-            <strong>Manutenção + de 15 dias</strong>
-            <span>A partir de R$ 95</span>
-          </div>
-
-          <div class="service" role="listitem">
-            <div>
-              <strong>Esmaltação em gel</strong>
-              <small>Pé ou mão</small>
-            </div>
-            <span>A partir de R$ 65</span>
-          </div>
-
-          <div class="service" role="listitem">
-            <div>
-              <strong>Esmaltação normal</strong>
-              <small>Cada</small>
-            </div>
-            <span>A partir de R$ 35</span>
-          </div>
-
-          <div class="service" role="listitem">
-            <strong>Combo pé e mão normal</strong>
-            <span>A partir de R$ 60</span>
-          </div>
-
-          <div class="service" role="listitem">
-            <strong>Esmaltação pé e mão em gel</strong>
-            <span>A partir de R$ 100</span>
-          </div>
-        </div>
-
-        <div class="services__action reveal">
-          <a class="text-link js-whatsapp-link" href="#">Ver horários disponíveis <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="benefits" aria-label="Benefícios">
-      <div class="container benefits__grid">
-        <article class="benefit reveal">
-          <span class="benefit__number">01</span>
-          <h3>Precisão</h3>
-          <p>Acabamento cuidadoso em cada detalhe.</p>
-        </article>
-
-        <article class="benefit reveal">
-          <span class="benefit__number">02</span>
-          <h3>Durabilidade</h3>
-          <p>Técnicas pensadas para manter suas unhas bonitas por mais tempo.</p>
-        </article>
-
-        <article class="benefit reveal">
-          <span class="benefit__number">03</span>
-          <h3>Cuidado</h3>
-          <p>Um atendimento pensado para valorizar suas unhas e seu estilo.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="portfolio section" id="trabalhos">
-      <div class="container">
-        <header class="portfolio__heading reveal">
-          <p class="overline">Meu trabalho</p>
-          <h2>Detalhes que falam por si.</h2>
-        </header>
-
-        <div class="portfolio__layout">
-          <figure class="portfolio__image portfolio__image--hero reveal">
-            <div class="photo-slot photo-slot--landscape"></div>
-          </figure>
-
-          <figure class="portfolio__image portfolio__image--portrait reveal">
-            <div class="photo-slot photo-slot--portrait"></div>
-          </figure>
-
-          <figure class="portfolio__image portfolio__image--detail reveal">
-            <div class="photo-slot photo-slot--detail"></div>
-          </figure>
-
-          <figure class="portfolio__image portfolio__image--wide reveal">
-            <div class="photo-slot photo-slot--wide"></div>
-          </figure>
-
-          <figure class="portfolio__image portfolio__image--small reveal">
-            <div class="photo-slot photo-slot--small"></div>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="technique section" id="cutilagem">
-      <div class="container technique__grid">
-        <div class="technique__copy reveal">
-          <p class="overline">Cutilagem russa</p>
-          <h2>O cuidado por trás do acabamento.</h2>
-          <p class="technique__lead">
-            A cutilagem é feita com tesoura e atenção ao contorno da unha, buscando uma preparação precisa e delicada.
-          </p>
-
-          <div class="technique__details" aria-label="Detalhes da cutilagem">
-            <span>Contorno definido</span>
-            <span>Esmaltação rente</span>
-            <span>Execução cuidadosa</span>
-          </div>
-
-          <p class="care-note">
-            A cutícula funciona como barreira natural de proteção, por isso o trabalho na região deve ser cuidadoso.
-            <a href="https://www.aad.org/public/everyday-care/nail-care-secrets/basics/pedicures/manicure-pedicure-safety" target="_blank" rel="noopener noreferrer">Fonte: American Academy of Dermatology.</a>
-          </p>
-        </div>
-
-        <figure class="technique__visual reveal">
-          <div class="photo-slot photo-slot--technique"></div>
+        <figure class="main-photo reveal">
+          <div class="photo-slot photo-slot--main" aria-label="Fotografia principal do trabalho de Jhordanna"></div>
         </figure>
-      </div>
-    </section>
 
-    <section class="final-cta section" id="contato">
-      <div class="container final-cta__inner reveal">
-        <p class="overline">Agendamento</p>
-        <h2>Seu próximo horário pode começar aqui.</h2>
-        <p>Escolha seu serviço e fale comigo pelo WhatsApp.</p>
-        <a class="button js-whatsapp-link" href="#">Agendar meu horário</a>
-      </div>
-    </section>
-  </main>
+        <div class="left-actions reveal">
+          <a class="action action--primary js-whatsapp-link" href="#">Agendar meu horário</a>
+          <a class="action action--secondary" href="#servicos">Ver serviços</a>
+          <a class="action action--secondary" href="#trabalhos">Portfólio</a>
+        </div>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
+        <section class="benefits-block reveal" aria-label="Diferenciais">
+          <h2>Beleza nos detalhes.</h2>
+
+          <div class="benefit-line">
+            <strong>Precisão</strong>
+            <span>Acabamento cuidadoso em cada detalhe.</span>
+          </div>
+
+          <div class="benefit-line">
+            <strong>Durabilidade</strong>
+            <span>Técnicas pensadas para manter suas unhas bonitas por mais tempo.</span>
+          </div>
+
+          <div class="benefit-line">
+            <strong>Cuidado</strong>
+            <span>Um atendimento pensado para valorizar suas unhas e seu estilo.</span>
+          </div>
+        </section>
+
+        <section class="portfolio-block reveal" id="trabalhos">
+          <div class="section-rule-title">
+            <h2>Portfólio</h2>
+          </div>
+
+          <div class="portfolio-grid">
+            <figure><div class="photo-slot photo-slot--square"></div></figure>
+            <figure><div class="photo-slot photo-slot--square"></div></figure>
+            <figure><div class="photo-slot photo-slot--portrait"></div></figure>
+            <figure><div class="photo-slot photo-slot--portrait"></div></figure>
+          </div>
+        </section>
+      </div>
+
+      <div class="right-column">
+        <section class="commercial-intro reveal">
+          <p>Jhordanna Araújo · Nail Designer</p>
+          <h1>Cuidado, precisão e beleza em cada detalhe.</h1>
+        </section>
+
+        <section class="services-block reveal" id="servicos">
+          <div class="section-rule-title section-rule-title--center">
+            <h2>Serviços</h2>
+          </div>
+
+          <div class="service-list" role="list" aria-label="Catálogo de serviços">
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">01</div>
+              <div class="service-item__content">
+                <h3>Alongamento</h3>
+                <p>Molde F1</p>
+                <strong>R$ 110</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">02</div>
+              <div class="service-item__content">
+                <h3>Banho em gel</h3>
+                <strong>R$ 75</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">03</div>
+              <div class="service-item__content">
+                <h3>Blindagem</h3>
+                <strong>R$ 70</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">04</div>
+              <div class="service-item__content">
+                <h3>Manutenção de 15 dias</h3>
+                <strong>R$ 85</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">05</div>
+              <div class="service-item__content">
+                <h3>Manutenção + de 15 dias</h3>
+                <strong>R$ 95</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">06</div>
+              <div class="service-item__content">
+                <h3>Esmaltação em gel</h3>
+                <p>Pé ou mão</p>
+                <strong>R$ 65</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">07</div>
+              <div class="service-item__content">
+                <h3>Esmaltação normal</h3>
+                <p>Cada</p>
+                <strong>R$ 35</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">08</div>
+              <div class="service-item__content">
+                <h3>Combo pé e mão normal</h3>
+                <strong>R$ 60</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+
+            <article class="service-item" role="listitem">
+              <div class="service-item__number">09</div>
+              <div class="service-item__content">
+                <h3>Esmaltação pé e mão em gel</h3>
+                <strong>R$ 100</strong>
+                <a class="service-item__cta js-whatsapp-link" href="#">Agendar</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="technique-block reveal" id="cutilagem">
+          <div class="section-rule-title section-rule-title--center">
+            <h2>Cutilagem russa</h2>
+          </div>
+
+          <div class="technique-layout">
+            <div class="technique-copy">
+              <p>A cutilagem é feita com tesoura e atenção ao contorno da unha, buscando uma preparação precisa e delicada.</p>
+
+              <ul>
+                <li>Contorno definido</li>
+                <li>Esmaltação rente</li>
+                <li>Execução cuidadosa</li>
+              </ul>
+
+              <p class="care-note">
+                A cutícula funciona como barreira natural de proteção, por isso o trabalho na região deve ser cuidadoso.
+                <a href="https://www.aad.org/public/everyday-care/nail-care-secrets/basics/pedicures/manicure-pedicure-safety" target="_blank" rel="noopener noreferrer">Fonte: American Academy of Dermatology.</a>
+              </p>
+            </div>
+
+            <figure class="technique-photo">
+              <div class="photo-slot photo-slot--technique"></div>
+            </figure>
+          </div>
+        </section>
+
+        <section class="contact-block reveal" id="contato">
+          <p class="contact-block__eyebrow">Agendamento</p>
+          <h2>Seu próximo horário pode começar aqui.</h2>
+          <a class="contact-button js-whatsapp-link" href="#">Agendar meu horário</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
       <span>Jhordanna Araújo</span>
       <span>Nail Designer</span>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <a class="mobile-booking js-whatsapp-link" href="#" aria-label="Agendar meu horário pelo WhatsApp">
-    <span>Agendar</span>
-    <span aria-hidden="true">↗</span>
+    Agendar
   </a>
 
   <script src="./script.js"></script>
