@@ -16,9 +16,9 @@ function setupWhatsAppLinks() {
   );
 
   document.querySelectorAll(".js-whatsapp-link").forEach((link) => {
-    link.setAttribute("href", url);
-    link.setAttribute("target", "_blank");
-    link.setAttribute("rel", "noopener noreferrer");
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
 
     link.addEventListener("click", () => {
       const params = new URLSearchParams(window.location.search);
@@ -37,14 +37,14 @@ function setupWhatsAppLinks() {
   });
 }
 
-function setupReveals() {
-  const elements = document.querySelectorAll(".reveal");
+function setupReveal() {
+  const items = document.querySelectorAll(".reveal");
 
   if (
     window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
     !("IntersectionObserver" in window)
   ) {
-    elements.forEach((element) => element.classList.add("is-visible"));
+    items.forEach((item) => item.classList.add("is-visible"));
     return;
   }
 
@@ -57,13 +57,13 @@ function setupReveals() {
       });
     },
     {
-      threshold: 0.12,
-      rootMargin: "0px 0px -7% 0px"
+      threshold: 0.1,
+      rootMargin: "0px 0px -6% 0px"
     }
   );
 
-  elements.forEach((element) => observer.observe(element));
+  items.forEach((item) => observer.observe(item));
 }
 
 setupWhatsAppLinks();
-setupReveals();
+setupReveal();
