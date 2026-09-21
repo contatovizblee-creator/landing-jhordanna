@@ -38,13 +38,13 @@ function setupWhatsAppLinks() {
 }
 
 function setupReveal() {
-  const items = document.querySelectorAll(".reveal");
+  const elements = document.querySelectorAll(".reveal");
 
   if (
     window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
     !("IntersectionObserver" in window)
   ) {
-    items.forEach((item) => item.classList.add("is-visible"));
+    elements.forEach((element) => element.classList.add("is-visible"));
     return;
   }
 
@@ -58,11 +58,11 @@ function setupReveal() {
     },
     {
       threshold: 0.1,
-      rootMargin: "0px 0px -6% 0px"
+      rootMargin: "0px 0px -5% 0px"
     }
   );
 
-  items.forEach((item) => observer.observe(item));
+  elements.forEach((element) => observer.observe(element));
 }
 
 setupWhatsAppLinks();
