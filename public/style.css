@@ -731,3 +731,68 @@ h2 {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Real portfolio photography */
+.editorial-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--bg-soft);
+}
+
+.editorial-photo--hero {
+  min-height: calc(100svh - 152px);
+  object-position: 50% 50%;
+}
+
+.editorial-photo--landscape {
+  aspect-ratio: 16 / 9;
+  object-position: center 52%;
+}
+
+.editorial-photo--portrait {
+  aspect-ratio: 4 / 5;
+  object-position: center;
+}
+
+.editorial-photo--detail {
+  aspect-ratio: 4 / 5.4;
+  object-position: center;
+}
+
+.editorial-photo--wide {
+  aspect-ratio: 16 / 8.5;
+  object-position: center 48%;
+}
+
+.editorial-photo--small {
+  aspect-ratio: 1 / 1;
+  object-position: center;
+}
+
+.editorial-photo--technique {
+  aspect-ratio: 4 / 5;
+  object-position: center;
+}
+
+.portfolio__image figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .editorial-photo--hero {
+    min-height: 62svh;
+  }
+
+  .editorial-photo--landscape,
+  .editorial-photo--wide {
+    aspect-ratio: 4 / 3;
+  }
+}
