@@ -382,6 +382,11 @@ h2 {
   grid-column: 3 / 6;
 }
 
+.portfolio__image--cuticle {
+  grid-column: 8 / 13;
+  margin-top: 120px;
+}
+
 /* Technique */
 .technique {
   background: var(--bg-soft);
@@ -654,6 +659,11 @@ h2 {
     margin: 56px 0 0 auto;
   }
 
+  .portfolio__image--cuticle {
+    width: 78%;
+    margin: 72px 0 0;
+  }
+
   .photo-slot--landscape,
   .photo-slot--wide {
     aspect-ratio: 4 / 3;
@@ -769,6 +779,11 @@ h2 {
 
 .editorial-photo--small {
   aspect-ratio: 1 / 1;
+  object-position: center;
+}
+
+.editorial-photo--cuticle {
+  aspect-ratio: 4 / 5;
   object-position: center;
 }
 
