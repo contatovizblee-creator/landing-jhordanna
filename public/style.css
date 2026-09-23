@@ -382,6 +382,11 @@ h2 {
   grid-column: 3 / 6;
 }
 
+.portfolio__image--extra {
+  grid-column: 8 / 13;
+  margin-top: -34px;
+}
+
 .portfolio__image--cuticle {
   grid-column: 8 / 13;
   margin-top: 120px;
@@ -659,6 +664,11 @@ h2 {
     margin: 56px 0 0 auto;
   }
 
+  .portfolio__image--extra {
+    width: 72%;
+    margin: 42px auto 0 0;
+  }
+
   .portfolio__image--cuticle {
     width: 78%;
     margin: 72px 0 0;
@@ -780,6 +790,11 @@ h2 {
 .editorial-photo--small {
   aspect-ratio: 1 / 1;
   object-position: center;
+}
+
+.editorial-photo--extra {
+  aspect-ratio: 4 / 5;
+  object-position: center 46%;
 }
 
 .editorial-photo--cuticle {
