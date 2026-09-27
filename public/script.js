@@ -1,7 +1,8 @@
 const siteConfig = {
   whatsappNumber: "556492138965",
   whatsappMessage:
-    "Oi! Vi seu catálogo de serviços e gostei do seu trabalho. Gostaria de saber mais e verificar os horários disponíveis para agendar. 💕"
+    "Oi! Vi seu catálogo de serviços e gostei do seu trabalho. Gostaria de saber mais e verificar os horários disponíveis para agendar. 💕",
+  calendlyUrl: "https://calendly.com/jhordannaaraujo7"
 };
 
 function buildWhatsAppUrl(number, message) {
@@ -37,6 +38,47 @@ function setupWhatsAppLinks() {
   });
 }
 
+
+function openCalendlyPopup(event) {
+  event.preventDefault();
+
+  if (window.Calendly && typeof window.Calendly.initPopupWidget === "function") {
+    window.Calendly.initPopupWidget({
+      url: siteConfig.calendlyUrl
+    });
+    return;
+  }
+
+  window.open(siteConfig.calendlyUrl, "_blank", "noopener,noreferrer");
+}
+
+function setupCalendlyLinks() {
+  document.querySelectorAll(".js-calendly-link").forEach((link) => {
+    link.href = siteConfig.calendlyUrl;
+    link.addEventListener("click", openCalendlyPopup);
+  });
+
+  window.addEventListener("message", (event) => {
+    if (!event.data || typeof event.data.event !== "string") return;
+    if (!event.data.event.startsWith("calendly.")) return;
+
+    if (event.data.event === "calendly.event_scheduled") {
+      const params = new URLSearchParams(window.location.search);
+
+      window.dispatchEvent(
+        new CustomEvent("booking_scheduled", {
+          detail: {
+            source: "calendly",
+            utm_source: params.get("utm_source"),
+            utm_medium: params.get("utm_medium"),
+            utm_campaign: params.get("utm_campaign")
+          }
+        })
+      );
+    }
+  });
+}
+
 function setupReveal() {
   const items = document.querySelectorAll(".reveal");
 
@@ -66,4 +108,5 @@ function setupReveal() {
 }
 
 setupWhatsAppLinks();
+setupCalendlyLinks();
 setupReveal();
